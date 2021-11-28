@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+
+const todoList = [
+  {
+    id: 1,
+    description: "Learn React",
+    status: "not-started",
+  },
+  {
+    id: 2,
+    description: "Learn Redux",
+    status: "not-started",
+  },
+];
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <input type="text" /> <button> Add </button>
+      {todoList.map((val, key) => {
+        return (
+          <div key={key} style={{ marginTop: "10px" }}>
+            <p style={{ display: "inline", marginRight: "10px" }}>
+              {val.description}{" "}
+            </p>{" "}
+            <button> Remove</button>
+          </div>
+        );
+      })}
     </div>
   );
 }
