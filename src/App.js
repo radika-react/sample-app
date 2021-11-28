@@ -1,6 +1,6 @@
 import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import cart from "./cart";
+import Cart from "./cart";
 
 const todoList = [
   {
