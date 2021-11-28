@@ -1,4 +1,6 @@
 import "./App.css";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import cart from "./cart";
 
 const todoList = [
   {
@@ -16,6 +18,11 @@ const todoList = [
 function App() {
   return (
     <div className="App">
+      <Router>
+        <Switch>
+          <Route path="/cart" component={Cart} />
+        </Switch>
+      </Router>
       <input type="text" /> <button> Add </button>
       {todoList.map((val, key) => {
         return (
