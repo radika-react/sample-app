@@ -1,6 +1,7 @@
 import "./App.css";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
 import Cart from "./cart";
+import Home from "./home";
 
 const todoList = [
   {
@@ -20,10 +21,11 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
+          <Route exact path="/" component={Home} />
           <Route path="/cart" component={Cart} />
         </Switch>
       </Router>
-      <input type="text" /> <button> Add </button>
+      {/* <input type="text" /> <button> Add </button>
       {todoList.map((val, key) => {
         return (
           <div key={key} style={{ marginTop: "10px" }}>
@@ -33,7 +35,7 @@ function App() {
             <button> Remove</button>
           </div>
         );
-      })}
+      })} */}
     </div>
   );
 }
